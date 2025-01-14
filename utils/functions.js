@@ -98,19 +98,17 @@ module.exports = {
                     }
                     
                     const response = {
-                        author: {
+                        
                             name: null,
                             id: null,
-                            description: null,
-                        },
-                        video: {
+                            description: null,       
                             url: dataList[0].download_link || null,
                             title: dataList[0].title || null,
                             description: dataList[0].description || null,
                             thumbnail: dataList[0].thumbnail_link || null,
                             lengthSeconds: null,
                             viewCount: null,
-                        }
+                        
                     }
                     
                     return res.status(200).json(response);
