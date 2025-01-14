@@ -124,19 +124,15 @@ module.exports = {
                     });
                     
                     const response = {
-                        author: {
                             name: result.result.author.nickname,
                             id: null,
                             description: null,
-                        },
-                        video: {
                             url: result.result.video,
                             title: null,
                             description: result.result.desc,
                             thumbnail: null,
                             lengthSeconds: null,
                             viewCount: null,
-                        }
                     }
                     
                     return res.status(200).json(response);
@@ -152,19 +148,16 @@ module.exports = {
                     const result = await ytdl.getInfo(url);
                     
                     const response = {
-                        author: {
+                        
                             name: result.videoDetails.author.name,
                             id: result.videoDetails.author.id,
                             description: null,
-                        },
-                        video: {
                             url: result.videoDetails.video_url,
                             title: result.videoDetails.title,
                             description: result.videoDetails.description,
                             thumbnail: result.videoDetails.thumbnails[result.videoDetails.thumbnails.length - 1].url,
                             lengthSeconds: result.videoDetails.lengthSeconds,
                             viewCount: result.videoDetails.viewCount,
-                        }
                     }
                     
                     return res.status(200).json(response);
@@ -179,19 +172,16 @@ module.exports = {
                     const {result} = await TwitterDLs(url, {});
                     
                     const response = {
-                        author: {
+                        
                             name: result.author.username,
                             id: null,
                             description: result.author.bio,
-                        },
-                        video: {
                             url: result.media[0].videos[result.media[0].videos.length - 1].url,
                             title: null,
                             description: result.description,
                             thumbnail: result.media[0].cover,
                             lengthSeconds: result.media[0].duration,
                             viewCount: result.statistics.viewCount,
-                        }
                     }
                     
                     return res.status(200).json(response);
@@ -206,19 +196,15 @@ module.exports = {
                     const result = await scdl.getInfo(url);
 
                     const response = {
-                        author: {
                             name: result.user.username,
                             id: result.user.id,
                             description: result.user.description,
-                        },
-                        video: {
                             url: result.permalink_url,
                             title: result.title,
                             description: null,
                             thumbnail: result.artwork_url,
                             lengthSeconds: result.duration,
                             viewCount: result.playback_count,
-                        }
                     }
 
                     return res.status(200).json(response);
