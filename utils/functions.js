@@ -1,4 +1,4 @@
-const ytdl = require('@distube/ytdl-core');
+const ytdl = require('ytdl-core');
 const scdl = require('soundcloud-downloader').default;
 const { TwitterDL } = require("twitter-downloader");
 const TikTok = require("@tobyg74/tiktok-api-dl");
