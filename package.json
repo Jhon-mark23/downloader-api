@@ -12,6 +12,7 @@
     "@distube/ytdl-core": "^4.15.8",
     "@sasmeee/igdl": "^1.0.0",
     "@tobyg74/tiktok-api-dl": "^1.1.4",
+    "@ybd-project/ytdl-core": "^6.0.8",
     "axios": "^1.7.4",
     "express": "^4.19.2",
     "https": "^1.0.0",
