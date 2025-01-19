@@ -125,14 +125,12 @@ module.exports = {
                     
                     const response = {
                             name: result.result.author.nickname,
-                            id: null,
                             description: null,
                             url: result.result.video,
-                            title: null,
                             description: result.result.desc,
-                            thumbnail: null,
-                            lengthSeconds: null,
-                            viewCount: null,
+                            
+                            
+                            
                     }
                     
                     return res.status(200).json(response);
